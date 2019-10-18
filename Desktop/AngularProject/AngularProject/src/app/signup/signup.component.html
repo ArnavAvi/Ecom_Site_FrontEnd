@@ -1,0 +1,76 @@
+<!--
+
+<div class="container">
+  <div class="row">
+    <div class="col-sm-9 col-md-7 col-lg-5 mx-auto">
+      <div class="card card-signin my-5">
+        <div class="card-body">
+          <h5 class="card-title text-center">Register For Free</h5>
+          <form class="form-signin" #myform="ngForm" (ngSubmit)="submitForm(myform.value)">
+
+            <div class="form-label-group">
+              <input type="text" id="inputName" ngModel="inputName" class="form-control" placeholder="Name" style="padding:5px" required autofocus>
+              <label for="inputName">User Name</label>
+            </div>
+
+
+            <div class="form-label-group">
+              <input type="email" id="inputEmail" ngModel="inputEmail" class="form-control" placeholder="Email address" style="padding:5px" required autofocus>
+              <label for="inputEmail">Email address</label>
+            </div>
+
+
+            <div class="form-label-group">
+              <input type="password" id="inputPassword" ngModel="inputPassword" class="form-control" placeholder="Password" style="padding:5px" required>
+              <label for="inputPassword">Password</label>
+            </div>
+            <hr class="my-4">
+            <div class="custom-control custom-checkbox mb-3">
+              <input type="checkbox" class="custom-control-input" id="customCheck1">
+              <label class="custom-control-label" for="customCheck1">Remember password</label>
+            <a class="ml-3" routerLink="\home">Back to home</a>
+            </div>
+            <button class="btn btn-lg btn-primary btn-block text-uppercase" type="submit">REGISTER</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+-->
+
+<div class="container">
+  <div class="row">
+  <div class="col-md-4"></div>
+  <div class="col-md-4">
+    <form> <!--#myform="ngForm" (ngSubmit)="submitForm(this.myform)">-->
+    <div class="form-group">
+      <label>Enter Name</label>
+      <input type="text" name="name" [(ngModel)]="user.username" class="form-control"/>
+    </div>
+
+      <div class="form-group">
+        <label>Enter Email</label>
+        <input type="email" name="email" [(ngModel)]="user.email" class="form-control"/>
+      </div>
+
+      <div class="form-group">
+        <label>Enter Password</label>
+        <input type="password" name="password" [(ngModel)]="user.password" class="form-control"/>
+      </div>
+    <br>
+
+      <input type="button" class="btn btn-primary btn-block" (click)="addUsers(user)" value="SUBMIT"><br>
+      <input type="button" class="btn btn-primary btn-block" routerLink="\home" value="back">
+      <button (click)="func()">just to check</button>
+    </form>
+
+
+  </div>
+
+    <div class="col-md-4"></div>
+
+  </div>
+</div>
+
+

@@ -1,0 +1,16 @@
+<app-navbar xmlns:width="http://www.w3.org/1999/xhtml"></app-navbar>
+  <div style="margin-left: 450px; margin-top: 9px;">
+<img src="{{image}}" style="height: 500px; width: 500px">
+
+  </div>
+<div style="margin-left: 450px">
+<br>
+
+  <b>Product</b> {{userName}}<br><br>
+  <b>Catagory</b> {{catagory}}<br><br>
+  <b>Details</b> {{detail}}<br><br>
+  <b>Price</b> Rs.{{price}}<br><br>
+  <button (click)="addThisToCart(userId)">Add to Cart</button>
+  <button routerLink="\home" style="margin-left: 30px">Back</button>
+  <br>
+  </div>

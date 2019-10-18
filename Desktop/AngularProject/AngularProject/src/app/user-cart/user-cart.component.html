@@ -1,0 +1,50 @@
+<link href="//netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//netdna.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+
+<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+
+<app-navbar></app-navbar>
+<div class="container-fluid">
+  <table class="table table-hover table-condensed table-bordered">
+    <thead>
+    <tr>
+      <th style="width:30%" class="text-center">Product</th>
+      <th style="width:20%" class="text-center">Price</th>
+      <th style="width:10%" class="text-center">Quantity</th>
+      <th style="width:25%" class="text-center">Subtotal</th>
+      <th style="width:15%" class="text-center"></th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let p of prod">
+      <td>
+        <div class="row">
+          <div class="col-sm-2 hidden-xs">
+            <img src="{{p.product.image}}" (click)="cartTOProd(p.product.image)" height="80px" width="80px" alt="image" class="img-responsive dataTableImg"/></div>
+          <div class="pt-2"style="margin-left: 90px" (click)="cartTOProd(p.product.productId)" >{{p.product.name}}</div>
+        </div>
+      </td>
+      <td  class="text-center pt-4">{{p.product.price}}</td>
+      <td>
+      <button (click)="removeOne(p.product.id)">-</button>{{p.quantity}}<button (click)="addOne(p.product.id)">+</button>
+      </td>
+      <td class="text-center pt-4">{{(p.quantity)*(p.product.price)}}</td>
+      <td><button class=" btn btn-danger mt-2" (click)="removeProduct(p.product.productId)">remove</button></td>
+    </tr>
+    </tbody>
+    <tfoot>
+    <tr>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td class="hidden-xs text-center"><strong>{{total}}</strong></td>
+    </tr>
+    </tfoot>
+  </table>
+
+  <div class="text-align">
+    <button class="btn btn-secondary ml-4" routerLink="/home">Done</button>
+  </div>
+</div>

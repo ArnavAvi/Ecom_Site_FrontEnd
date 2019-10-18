@@ -1,0 +1,30 @@
+
+
+
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+
+<div class="wrapper fadeInUp">
+  <div id="formContent">
+    <h2 style="color:grey">Welcome Back!!</h2>
+    <i class="fas fa-user"></i>
+    <div class="fadeIn first">
+
+    </div>
+
+    <form>
+      <input type="text" id="login" class="fadeIn second" name="login" placeholder="login" autocomplete="off" [(ngModel)]="username">
+      <input type="text" id="password" class="fadeIn third" name="login" placeholder="password" autocomplete="none" [(ngModel)]="password">
+      <input type="button" class="fadeIn fourth" value="Log In" (click)="checkLogin()">
+      <input type="button" routerLink="\home" class="fadeIn fourth" value="Home"/>
+    </form>
+
+    <div id="formFooter">
+      <a class="underlineHover" href="#">Forgot Password?</a>
+    </div>
+
+  </div>
+</div>
+

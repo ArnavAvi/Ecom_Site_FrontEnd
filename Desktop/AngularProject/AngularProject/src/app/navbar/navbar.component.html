@@ -1,0 +1,21 @@
+<nav class="navbar navbar-expand-md navbar-light" style="background-color: #00acee;font-size: 12px">
+  <a id = "stag" class="navbar-brand" href="#">Basket</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+    <div class="navbar-nav">
+      <a class="nav-item nav-link ml-2" routerLink="/home">Home</a>
+      <a class="nav-item nav-link">Fashion</a>
+      <a class="nav-item nav-link">Electronics</a>
+      <a class="nav-item nav-link">Acessories</a>
+      <a class="nav-item nav-link">Entertainment</a>
+
+      <app-search style="margin-left:200px"></app-search>
+      <a *ngIf="custom()" class="nav-item nav-link ml-3" routerLink="/login">Login</a>
+      <a *ngIf="authing.isUserLoggedIn()" class="nav-item nav-link ml-3" routerLink="/usercart">My Cart</a>
+      <a *ngIf="authing.isUserLoggedIn()" class="nav-item nav-link ml-3" (click)="logItOut()">LogOut</a>
+      <a class="nav-item nav-link ml-3" routerLink="/signup">Register</a>
+    </div>
+  </div>
+</nav>
